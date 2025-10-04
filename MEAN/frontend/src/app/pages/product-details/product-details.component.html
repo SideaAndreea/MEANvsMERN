@@ -1,0 +1,30 @@
+<section *ngIf="product; else loading">
+  <div class="layout-app">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="product-content">
+            <h2 class="title">Detalii produs</h2>
+            <img
+              [src]="'/assets' + product.image"
+              [alt]="product.name"
+              class="product-image"
+            />
+            <h3>{{ product.name }}</h3>
+            <h4>€{{ product.price }}</h4>
+            <p>{{ product.description }}</p>
+          </div>
+          <div class="button-wrapper">
+            <button mat-stroked-button color="primary" (click)="goBack()">
+              Înapoi
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<ng-template #loading>
+  <h4 class="text-center pt-5">Loading...</h4>
+</ng-template>

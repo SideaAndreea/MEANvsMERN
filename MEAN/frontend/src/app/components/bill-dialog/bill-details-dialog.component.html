@@ -1,0 +1,85 @@
+<div class="card">
+  <div class="cardHeader">
+    <h2 class="logo">Camera Shop</h2>
+    <span>Număr de telefon: <b>+40/0000000</b></span>
+    <span>Adresa: <b>Oradea</b></span>
+  </div>
+
+  <div class="cardBody">
+    <div class="group">
+      <span>Numele clientului:</span>
+      <span
+        ><b>{{ data.customerName }}</b></span
+      >
+    </div>
+    <div class="group">
+      <span>Numărul de telefon:</span>
+      <span
+        ><b>{{ data.customerPhone }}</b></span
+      >
+    </div>
+    <div class="group">
+      <span>Adresa clientului:</span>
+      <span
+        ><b>{{ data.customerAddress }}</b></span
+      >
+    </div>
+    <div class="group">
+      <span>Valoare totală:</span>
+      <span
+        ><b>€{{ data.totalAmount }}</b></span
+      >
+    </div>
+  </div>
+
+  <div class="cardFooter">
+    <h4>Comanda ta</h4>
+    <div
+      class="footerCard"
+      *ngFor="let product of data.cartItems; let i = index"
+    >
+      <div class="group">
+        <span>Produs:</span>
+        <span
+          ><b>{{ product.name }}</b></span
+        >
+      </div>
+      <div class="group">
+        <span>Cantitate:</span>
+        <span
+          ><b>{{ product.quantity }}</b></span
+        >
+      </div>
+      <div class="group">
+        <span>Preț:</span>
+        <span
+          ><b>€{{ product.price }}</b></span
+        >
+      </div>
+    </div>
+
+    <div class="footerCardTotal">
+      <div class="group">
+        <h3>Total:</h3>
+        <h3>
+          <b>€{{ data.totalAmount }}</b>
+        </h3>
+      </div>
+    </div>
+
+    <div class="footerThanks">
+      <span>Mulțumim că ați comandat de la noi!</span>
+    </div>
+  </div>
+
+  <div class="closeButtonContainer">
+    <button
+      mat-raised-button
+      color="primary"
+      mat-dialog-close
+      style="font-family: Times New Roman, Times, serif"
+    >
+      Închide
+    </button>
+  </div>
+</div>

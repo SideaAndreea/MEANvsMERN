@@ -1,0 +1,24 @@
+<div class="form">
+  <h2>Camera Shop</h2>
+  <p>Înregistrează-te</p>
+  <div class="form-group">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <label for="name">Nume</label>
+      <input id="name" type="text" formControlName="name" />
+      <br />
+
+      <label for="userId">ID Utilizator</label>
+      <input id="userId" type="text" formControlName="userId" />
+      <br />
+
+      <label for="password">Parola</label>
+      <input id="password" type="password" formControlName="password" />
+      <br />
+
+      <div class="form-btn-add">
+        <button type="submit" [disabled]="loading">Înregistrează-te</button>
+        <button mat-button (click)="goToLogin()">Autentifică-te aici!</button>
+      </div>
+    </form>
+  </div>
+</div>

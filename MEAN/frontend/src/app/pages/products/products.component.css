@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", serif;
+}
+
+mat-icon {
+  font-family: "Material Icons" !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+.product-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.button-container button {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.button-container button:hover {
+  background-color: #64a6f1;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-table th,
+.product-table td {
+  padding: 12px;
+  text-align: left;
+  border-right: 1px solid #ddd;
+}
+
+.product-table th:last-child,
+.product-table td:last-child {
+  border-right: none;
+}
+
+.product-table th {
+  font-weight: bold;
+  background-color: #f5f5f5;
+}
+
+.product-table tr {
+  border-bottom: 1px solid #eee;
+}
+
+.product-table tr:last-child {
+  border-bottom: none;
+}

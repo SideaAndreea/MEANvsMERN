@@ -1,0 +1,36 @@
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.dialog-actions {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.dialog-actions button {
+  margin-left: 8px;
+}
+
+.button-container button {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.button-container button:hover {
+  background-color: #64a6f1;
+}

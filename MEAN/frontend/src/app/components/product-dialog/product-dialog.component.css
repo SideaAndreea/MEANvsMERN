@@ -1,0 +1,15 @@
+* {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  font-size: 22px;
+}

@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", serif;
+  background-color: #ffffff;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 50px 0;
+  background-color: #f0f2f5;
+}
+
+.layout-app {
+  background-color: #ffffff;
+  padding: 20px 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.product-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.product-image {
+  max-width: 60%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: #0099ff;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  max-width: 600px;
+  text-align: center;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-wrapper button {
+  background-color: #0099ff;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button-wrapper button:hover {
+  background-color: #0066cc;
+}
+
+@media (max-width: 768px) {
+  .product-image {
+    max-width: 80%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  .button-wrapper button {
+    width: 100%;
+  }
+}

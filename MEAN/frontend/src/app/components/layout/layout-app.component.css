@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+mat-icon {
+  font-family: "Material Icons" !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  background-color: white;
+  color: #1890ff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left,
+.right {
+  flex: 1;
+}
+
+.center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.logo-title {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1.3px;
+  color: #1890ff;
+}
+
+.center a {
+  color: #1890ff;
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+mat-icon {
+  color: #1890ff;
+  margin-right: 4px;
+}
+
+a.active {
+  border-bottom: 2px solid #1890ff;
+  padding: 4px 8px;
+}
+
+a:hover {
+  background-color: rgba(24, 144, 255, 0.1);
+  border-radius: 4px;
+}
+
+.content {
+  padding: 24px;
+  background: #f0f2f5;
+  min-height: calc(100vh - 64px);
+}
+
+@media screen and (max-width: 768px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .center {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  .center a {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 8px 16px;
+  }
+
+  .logo-title {
+    font-size: 16px;
+  }
+}

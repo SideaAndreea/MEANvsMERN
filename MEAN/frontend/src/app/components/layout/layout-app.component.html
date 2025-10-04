@@ -1,0 +1,54 @@
+<mat-toolbar color="primary" class="toolbar">
+  <div class="left">
+    <span class="logo-title">📸 Camera Shop</span>
+  </div>
+
+  <div class="center">
+    <a
+      mat-button
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <mat-icon>home</mat-icon> Home
+    </a>
+
+    <ng-container *ngIf="role === 'admin'; else userMenu">
+      <a mat-button routerLink="/bills" routerLinkActive="active"
+        ><mat-icon>payments</mat-icon> Comenzi</a
+      >
+      <a mat-button routerLink="/products" routerLinkActive="active"
+        ><mat-icon>photo_camera</mat-icon> Produse</a
+      >
+      <a mat-button routerLink="/customers" routerLinkActive="active"
+        ><mat-icon>group</mat-icon> Clienți</a
+      >
+      <a mat-button routerLink="/users" routerLinkActive="active"
+        ><mat-icon>person</mat-icon> Utilizatori</a
+      >
+    </ng-container>
+
+    <ng-template #userMenu>
+      <a mat-button routerLink="/your-bills" routerLinkActive="active"
+        ><mat-icon>payments</mat-icon> Comenzile tale</a
+      >
+      <a mat-button routerLink="/purchased" routerLinkActive="active"
+        ><mat-icon>check_circle</mat-icon> Produse cumpărate</a
+      >
+    </ng-template>
+
+    <a mat-button (click)="logout()"><mat-icon>logout</mat-icon> LogOut</a>
+  </div>
+
+  <div class="right">
+    <span style="margin-right: 16px">Salut, {{ username }}</span>
+    <button mat-icon-button (click)="goToCart()" aria-label="cart">
+      <mat-icon>shopping_cart</mat-icon>
+      <span class="cart-badge">{{ cartItemsCount }}</span>
+    </button>
+  </div>
+</mat-toolbar>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

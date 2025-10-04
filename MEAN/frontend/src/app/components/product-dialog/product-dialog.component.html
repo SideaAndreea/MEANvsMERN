@@ -1,0 +1,59 @@
+<h2 mat-dialog-title class="title">
+  {{ isEditMode ? "Editare produs" : "Adăugare produs nou" }}
+</h2>
+
+<div style="max-height: 70vh; overflow-y: auto; padding: 0 8px 16px">
+  <form [formGroup]="form" (ngSubmit)="submit()" style="padding: 0 8px 16px">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Nume</mat-label>
+      <input matInput formControlName="name" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Preț (€)</mat-label>
+      <input matInput type="number" formControlName="price" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>URL Imagine</mat-label>
+      <input matInput formControlName="image" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Stoc</mat-label>
+      <input matInput formControlName="stock" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Descriere</mat-label>
+      <textarea matInput formControlName="description" required></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Categorie</mat-label>
+      <mat-select formControlName="category" required>
+        <mat-option value="Canon">Canon</mat-option>
+        <mat-option value="Nikon">Nikon</mat-option>
+        <mat-option value="Sony">Sony</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-slide-toggle formControlName="isFeatured"
+      >Produs featured</mat-slide-toggle
+    >
+  </form>
+</div>
+
+<div style="text-align: right; margin-top: 10px; padding: 0 8px 16px">
+  <button mat-button type="button" (click)="cancel()" style="font-size: 20px">
+    Anulează
+  </button>
+  <button
+    mat-flat-button
+    color="primary"
+    type="submit"
+    [disabled]="form.invalid"
+  >
+    {{ isEditMode ? "Salvează modificările" : "Adaugă produs" }}
+  </button>
+</div>

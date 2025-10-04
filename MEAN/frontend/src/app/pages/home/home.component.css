@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", serif;
+  background-color: #ffffff;
+}
+
+body {
+  font-family: "Times New Roman", serif;
+  background-color: #ffffff;
+}
+
+.product-btn {
+  margin-top: 25px;
+  width: 100%;
+}
+
+.product-btn button {
+  display: block;
+  margin: 0 auto;
+  background-color: #001e28;
+  color: #ffffff;
+  box-shadow: 0 0 5px #001e28;
+  transition: all 0.5s;
+  border: none;
+}
+
+.product-btn button:hover {
+  background-color: #ffffff;
+  color: #001e28;
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+}
+
+.categoryFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 30px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.category-active {
+  box-shadow: 0 0 5px #afafaf;
+  border-radius: 5px;
+}
+
+.categoryName {
+  text-transform: capitalize;
+  letter-spacing: 1.3px;
+}
+
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  text-align: center;
+  letter-spacing: 1.3px;
+  color: #001e28;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.form h2 {
+  letter-spacing: 2px;
+  color: #001e28;
+}
+
+.form p {
+  letter-spacing: 1.3px;
+  color: #001e28;
+}
+
+.cardHeader h2 {
+  letter-spacing: 1.3px;
+  color: #001e28;
+}
+
+.cardHeader span {
+  display: flex;
+  justify-content: center;
+  color: #001e28;
+  letter-spacing: 1.3px;
+}
+
+.cardBody {
+  margin-top: 30px;
+}
+
+.cardBody .group {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #001e28;
+  padding-top: 10px;
+}
+
+.footerCard {
+  margin: 15px 0;
+  box-shadow: 0 0 15px #afafaf;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.cardFooter h4 {
+  margin-top: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.footerCardTotal {
+  width: 100px;
+  margin: 25px 0 0 auto;
+}
+
+.footerCardTotal .group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerThanks {
+  text-align: center;
+  margin-top: 10px;
+  color: #001e28;
+}
+
+/* Stiluri pentru produsele de pe home */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Distanță mai mică între carduri pentru a încape 4 pe un rând */
+  padding: 0 40px; /* Spațiu pe laterale */
+  justify-content: center; /* Aliniere centrala a cardurilor pe rând */
+}
+
+.col-xs-12,
+.col-sm-6,
+.col-md-4,
+.col-lg-3 {
+  padding: 0;
+}
+
+.col-xs-12 {
+  width: 100%; /* Pe mobil, fiecare card ocupa toata latimea */
+}
+
+.col-sm-6 {
+  width: 50%; /* Pe tablete, cate 2 pe rand */
+}
+
+.col-md-4 {
+  width: 33.33%; /* Pe medii, cate 3 pe rand */
+}
+
+.col-lg-3 {
+  width: 23%; /* Pe desktop, cate 4 pe rand (micsorăm lățimea pentru a le încadra) */
+}
+
+/* Stilizare carduri produse */
+.product-card {
+  background-color: #ffffff; /* Fundal alb pentru carduri */
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Efect de marire la hover */
+}

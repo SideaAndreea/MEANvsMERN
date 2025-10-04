@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", serif;
+  background-color: #ffffff;
+}
+
+mat-icon {
+  font-family: "Material Icons" !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 22px;
+  display: inline-block;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  direction: ltr;
+  color: black;
+  background-color: transparent;
+}
+
+.card-container {
+  width: 240px;
+  margin-bottom: 30px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  width: 95%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 10px;
+  text-align: center;
+}
+
+.card-title {
+  font-family: "Times New Roman", serif;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-family: "Times New Roman", serif;
+  color: #001e28;
+  margin-bottom: 15px;
+}
+
+.product-btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.product-btn button {
+  background-color: #001e28;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.product-btn button:hover {
+  background-color: #ffffff;
+  color: #001e28;
+}
+
+.product-btn .button-icon {
+  background: #001e28;
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 12px;
+}
+
+.add-to-cart-icon {
+  font-size: 20px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.add-to-cart-icon:hover {
+  color: #1976d2;
+}

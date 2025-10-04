@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", serif;
+}
+
+mat-icon {
+  font-family: "Material Icons" !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+.product-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.button-container button {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.button-container button:hover {
+  background-color: #64a6f1;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-table th,
+.product-table td {
+  padding: 12px;
+  text-align: left;
+  border-right: 1px solid #ddd;
+}
+
+.product-table th:last-child,
+.product-table td:last-child {
+  border-right: none;
+}
+
+.product-table th {
+  font-weight: bold;
+  background-color: #f5f5f5;
+}
+
+.product-table tr {
+  border-bottom: 1px solid #eee;
+}
+
+.product-table tr:last-child {
+  border-bottom: none;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 24px 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  width: 320px;
+  max-width: 90vw;
+  z-index: 1000;
+  font-family: "Times New Roman", serif;
+}
+
+.popup h2 {
+  margin-bottom: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #1976d2;
+}
+
+.popup form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.popup input,
+.popup select {
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline-offset: 2px;
+  transition: border-color 0.3s ease;
+}
+
+.popup input:focus,
+.popup select:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 5px #1976d2;
+}
+
+.total {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #ddd;
+  font-size: 16px;
+  color: #444;
+}
+
+.total p {
+  margin: 4px 0;
+}
+
+.total h3 {
+  margin-top: 8px;
+  color: #1976d2;
+  font-weight: 700;
+}
+
+.popup button[type="submit"] {
+  margin-top: 16px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.popup button[type="submit"]:hover {
+  background-color: #1565c0;
+}
+
+.popup button[type="button"] {
+  margin-top: 8px;
+  background: none;
+  border: none;
+  color: #1976d2;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.popup button[type="button"]:hover {
+  text-decoration: underline;
+}

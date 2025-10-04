@@ -1,0 +1,131 @@
+<div class="product-container">
+  <h2 class="title">Coșul tău</h2>
+
+  <div *ngIf="cartItems.length === 0" class="empty-cart">
+    <h3>Coșul tău este gol!</h3>
+    <div class="button-container">
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="router.navigate(['/'])"
+      >
+        Mergi la produse
+      </button>
+    </div>
+  </div>
+
+  <div *ngIf="cartItems.length > 0">
+    <table
+      mat-table
+      [dataSource]="cartItems"
+      class="mat-elevation-z8 product-table"
+    >
+      <!-- Nume -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Nume</th>
+        <td mat-cell *matCellDef="let item">{{ item.name }}</td>
+      </ng-container>
+
+      <!-- Imagine -->
+      <ng-container matColumnDef="image">
+        <th mat-header-cell *matHeaderCellDef>Imagine</th>
+        <td mat-cell *matCellDef="let item">
+          <img
+            [src]="'/assets' + item.image"
+            [alt]="item.name"
+            width="60"
+            height="60"
+            style="object-fit: cover; border-radius: 4px"
+          />
+        </td>
+      </ng-container>
+
+      <!-- Preț -->
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef>Preț</th>
+        <td mat-cell *matCellDef="let item">€{{ item.price }}</td>
+      </ng-container>
+
+      <!-- Cantitate -->
+      <ng-container matColumnDef="quantity">
+        <th mat-header-cell *matHeaderCellDef>Cantitate</th>
+        <td mat-cell *matCellDef="let item">
+          <button mat-icon-button color="primary" (click)="decrement(item)">
+            -
+          </button>
+          <strong>{{ item.quantity }}</strong>
+          <button mat-icon-button color="primary" (click)="increment(item)">
+            +
+          </button>
+        </td>
+      </ng-container>
+
+      <!-- Acțiuni -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Acțiune</th>
+        <td mat-cell *matCellDef="let item">
+          <button
+            mat-icon-button
+            color="warn"
+            (click)="delete(item)"
+            aria-label="Șterge produs din coș"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr
+        mat-header-row
+        *matHeaderRowDef="['name', 'image', 'price', 'quantity', 'actions']"
+      ></tr>
+      <tr
+        mat-row
+        *matRowDef="
+          let row;
+          columns: ['name', 'image', 'price', 'quantity', 'actions']
+        "
+      ></tr>
+    </table>
+
+    <div
+      class="button-container"
+      style="justify-content: flex-end; margin-top: 20px"
+    >
+      <h3 style="margin-right: 20px; margin-bottom: 20px">
+        Subtotal: €{{ subTotal.toFixed(2) }}
+      </h3>
+      <button mat-raised-button color="primary" (click)="openBillPopup()">
+        Creare Factură
+      </button>
+    </div>
+
+    <div *ngIf="billPopupVisible" class="popup">
+      <h2>Creare Factură</h2>
+      <form [formGroup]="billForm" (ngSubmit)="generateBill()">
+        <input formControlName="customerName" placeholder="Nume client" />
+        <input formControlName="customerPhone" placeholder="Telefon" />
+        <input formControlName="customerAddress" placeholder="Adresă" />
+        <select formControlName="paymentMethod" required>
+          <option value="" disabled selected hidden>Metoda de plată</option>
+          <option value="cash">Cash</option>
+          <option value="paypal">Paypal</option>
+          <option value="card">Card</option>
+        </select>
+
+        <div class="total">
+          <p>Subtotal: €{{ subTotal.toFixed(2) }}</p>
+          <p>Taxă: €{{ (subTotal * 0.1).toFixed(2) }}</p>
+          <h3>Total: €{{ (subTotal + subTotal * 0.1).toFixed(2) }}</h3>
+        </div>
+
+        <button type="submit" mat-raised-button color="primary">
+          Generează factura
+        </button>
+        <button type="button" mat-button (click)="closeBillPopup()">
+          Anulează
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

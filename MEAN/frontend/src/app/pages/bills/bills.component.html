@@ -1,0 +1,84 @@
+<div class="product-container">
+  <h2 class="title">Toate Facturile</h2>
+
+  <div class="button-container">
+    <button mat-raised-button color="primary" (click)="openDialog()">
+      Adăugare factură nouă
+    </button>
+  </div>
+
+  <table
+    mat-table
+    [dataSource]="bills"
+    class="mat-elevation-z8 product-table"
+    *ngIf="!loading"
+  >
+    <!-- ID -->
+    <ng-container matColumnDef="_id">
+      <th mat-header-cell *matHeaderCellDef>ID</th>
+      <td mat-cell *matCellDef="let element">{{ element._id }}</td>
+    </ng-container>
+
+    <!-- Nume Client -->
+    <ng-container matColumnDef="customerName">
+      <th mat-header-cell *matHeaderCellDef>Nume client</th>
+      <td mat-cell *matCellDef="let element">{{ element.customerName }}</td>
+    </ng-container>
+
+    <!-- Telefon -->
+    <ng-container matColumnDef="customerPhone">
+      <th mat-header-cell *matHeaderCellDef>Număr de telefon</th>
+      <td mat-cell *matCellDef="let element">{{ element.customerPhone }}</td>
+    </ng-container>
+
+    <!-- Adresă -->
+    <ng-container matColumnDef="customerAddress">
+      <th mat-header-cell *matHeaderCellDef>Adresă</th>
+      <td mat-cell *matCellDef="let element">{{ element.customerAddress }}</td>
+    </ng-container>
+
+    <!-- Sub Total -->
+    <ng-container matColumnDef="subTotal">
+      <th mat-header-cell *matHeaderCellDef>Sub Total</th>
+      <td mat-cell *matCellDef="let element">{{ element.subTotal }}</td>
+    </ng-container>
+
+    <!-- Taxe -->
+    <ng-container matColumnDef="tax">
+      <th mat-header-cell *matHeaderCellDef>Taxe</th>
+      <td mat-cell *matCellDef="let element">{{ element.tax }}</td>
+    </ng-container>
+
+    <!-- Total -->
+    <ng-container matColumnDef="totalAmount">
+      <th mat-header-cell *matHeaderCellDef>Valoare totală</th>
+      <td mat-cell *matCellDef="let element">{{ element.totalAmount }}</td>
+    </ng-container>
+
+    <!-- Metodă Plată -->
+    <ng-container matColumnDef="paymentMethod">
+      <th mat-header-cell *matHeaderCellDef>Metodă Plată</th>
+      <td mat-cell *matCellDef="let element">{{ element.paymentMethod }}</td>
+    </ng-container>
+
+    <!-- Acțiuni -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Acțiuni</th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-icon-button color="primary" (click)="openDialog(element)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="deleteBill(element._id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <div class="spinner-container" *ngIf="loading">
+    <mat-spinner></mat-spinner>
+  </div>
+</div>

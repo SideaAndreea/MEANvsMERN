@@ -1,0 +1,90 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.form h2 {
+  letter-spacing: 2px;
+  color: #001e28;
+  margin-bottom: 5px;
+}
+
+.form p {
+  letter-spacing: 1.3px;
+  color: #001e28;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  box-shadow: 0 0 5px #001e28;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #001e28;
+  font-size: 14px;
+}
+
+.form-group input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #001e28;
+  width: 100%;
+  height: 40px;
+  padding: 5px 10px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  background-color: transparent;
+}
+
+.form-group input:focus {
+  border-color: #0099ff;
+}
+
+.form-btn-add {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.form-btn-add button[type="submit"] {
+  background-color: #001e28;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s all ease;
+  box-shadow: 0 0 5px #001e28;
+}
+
+.form-btn-add button[type="submit"]:hover {
+  background-color: #ffffff;
+  color: #001e28;
+}
+
+.form-btn-add button[mat-button] {
+  background: none;
+  border: none;
+  color: #001e28;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+  align-self: center;
+  padding: 0;
+}
+
+.form-btn-add button[mat-button]:hover {
+  color: #0099ff;
+}

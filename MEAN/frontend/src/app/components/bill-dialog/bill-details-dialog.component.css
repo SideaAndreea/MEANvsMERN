@@ -1,0 +1,96 @@
+.card {
+  padding: 20px;
+  background: #fff;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.cardHeader {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cardHeader .logo {
+  font-size: 24px;
+  color: #001e28;
+  letter-spacing: 1.3px;
+  margin-bottom: 5px;
+}
+
+.cardHeader span {
+  display: flex;
+  justify-content: center;
+  color: #001e28;
+  letter-spacing: 1.3px;
+  font-size: 14px;
+}
+
+.cardBody {
+  margin-top: 30px;
+}
+
+.cardBody .group {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dashed #001e28;
+  color: #001e28;
+  letter-spacing: 1.1px;
+  font-size: 15px;
+}
+
+.cardFooter {
+  margin-top: 30px;
+}
+
+.cardFooter h4 {
+  text-align: center;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #001e28;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.footerCard {
+  box-shadow: 0 0 8px #afafaf;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.footerCard .group {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #001e28;
+  letter-spacing: 1px;
+}
+
+.footerCardTotal {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footerCardTotal .group {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  font-weight: bold;
+  color: #001e28;
+}
+
+.footerThanks {
+  text-align: center;
+  margin-top: 20px;
+  color: #001e28;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.closeButtonContainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
